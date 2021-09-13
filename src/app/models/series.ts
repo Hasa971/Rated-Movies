@@ -7,6 +7,11 @@ export class SeriesList{
   public total_pages: number;
   public total_results: number;
   public episode_number: number;
+  public overview: string;
+  public name:string;
+  public poster_path:  string;
+
+
 
 }
 

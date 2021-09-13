@@ -1,3 +1,11 @@
-<p>
-  series-details works!
-</p>
+<h1 class="seriename"> {{series?.name}}</h1>
+<div  *ngIf="series?.name">
+  <img button ="button" class = "center" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{series?.poster_path}}"
+    [alt]="series.name ? series.name : series.name">
+  <img *ngIf="!series?.poster_path" src="assets/images/default-serie.png"
+    [alt]="series.name ? series.name : series.name">
+</div>
+<div class="overview">
+  <h2 class="name">Storyline</h2>
+  <div class="about" >{{series?.overview}}</div>
+</div>

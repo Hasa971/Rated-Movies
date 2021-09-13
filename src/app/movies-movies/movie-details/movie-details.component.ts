@@ -13,6 +13,7 @@ export class MovieDetailsComponent implements OnInit {
   movie:Movie;
   id: number;
 
+
   MoviesService: any;
     constructor(private Movie:MoviesService,
       private route: ActivatedRoute) { }

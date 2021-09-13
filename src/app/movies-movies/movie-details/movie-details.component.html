@@ -1,7 +1,11 @@
-<h1> {{movie?.title}}</h1>
-<div *ngIf="movie?.title">
+<h1 class="moviename" style="color: blue;"> {{movie?.title}}</h1>
+<div  *ngIf="movie?.title">
   <img button ="button" class = "center" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie?.poster_path}}"
     [alt]="movie.title ? movie.title : movie.title">
   <img *ngIf="!movie?.poster_path" src="assets/images/default-serie.png"
     [alt]="movie.title ? movie.title : movie.title">
+</div>
+<div class="overview">
+  <h2 class="title">Storyline</h2>
+  <div  >{{movie?.overview}}</div>
 </div>
