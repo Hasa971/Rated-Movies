@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.rows{
+
+  list-style: none;
+  padding: 4px;
+  flex: 0 0 30%;
+}
+.center{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.text-center{
+text-align: center;
+padding-top: 35px;
+}

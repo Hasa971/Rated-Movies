@@ -1,0 +1,30 @@
+
+  <mat-form-field appearance="fill">
+    <mat-label >Search Movie</mat-label>
+    <input
+    matInput
+     placeholder="Search here..."
+      type="text"
+        placeholder= ""
+        (input)=" filterMovies($event)"
+          [(ngModel)]="searchInputM"
+         >
+  </mat-form-field>
+  <div class="row">
+    <div class="rows" *ngFor="let movie of moviefilter">
+        <mat-card >
+          <a [routerLink]="['/movie-details/',movie.id]">
+              <div >
+                <img button ="button" class = "center" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie?.poster_path}}"
+                  [alt]="movie.title ? movie.title : movie.name">
+                <img *ngIf="!movie?.poster_path" src="assets/images/default-serie.png"
+                  [alt]="movie.title ? movie.title : movie.name">
+              </div>
+            <mat-card-title class="text-center"> {{movie.title}} </mat-card-title>
+          </a>
+        </mat-card>
+    </div>
+  </div>
+
+
+

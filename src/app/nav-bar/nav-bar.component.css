@@ -1,0 +1,15 @@
+.custom-bar{
+  background-color: #2D2424;
+
+
+}
+.text{
+  color: antiquewhite;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}

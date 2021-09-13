@@ -1,0 +1,22 @@
+<form>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search Series</mat-label>
+    <input matInput placeholder="Search here..." type="text" placeholder="" (input)="filterSeries($event)"
+      [(ngModel)]="searchInput" name="series">
+  </mat-form-field>
+</form>
+<div class="row">
+  <div class="rows" *ngFor="let serie of seriesfilter">
+      <mat-card style = "cursor: pointer;">
+        <a [routerLink]="['/series-details/',series.id]">
+            <div>
+              <img class= "center"src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{serie?.poster_path}}"
+                [alt]="serie.title ? serie.title : serie.name">
+              <img *ngIf="!serie?.poster_path" src="assets/images/default-serie.png"
+                [alt]="serie.title ? serie.title : serie.name">
+            </div>
+          <mat-card-title class="text-center"> {{serie.name}} </mat-card-title>
+          </a>
+      </mat-card>
+  </div>
+</div>
